@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using UICommon;
+using MyPlatformConfiguration;
 
 namespace MyModularMonolith.Host
 {
@@ -27,6 +28,7 @@ namespace MyModularMonolith.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions<TabOptions>();
+            services.AddPlatformConfigurationArea();
             services.AddRazorPages();
         }
 

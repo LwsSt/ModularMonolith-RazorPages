@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <a asp-page="Index">Home</a>
+            <a asp-area="" asp-page="Index">Home</a>
             @foreach (var tab in tabOptions.Value.Tabs)
             {
                 <a asp-area="@tab.Area" asp-page="Index">@tab.Name</a>
