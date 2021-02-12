@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject IOptions<TabOptions> tabOptions
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,6 +12,10 @@
     <header>
         <nav>
             <a asp-page="Index">Home</a>
+            @foreach (var tab in tabOptions.Value.Tabs)
+            {
+                <a asp-area="@tab.Area" asp-page="Index">@tab.Name</a>
+            }
         </nav>
     </header>
 
